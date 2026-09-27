@@ -55,22 +55,22 @@ notebook filename next to the checked item so this doubles as an index.
   - [ ] Weibull Distribution — *skipped by user judgment, not important to their goals*
 
 ## Ch 3 — Statistical Experiments and Significance Testing
-- [x] A/B Testing and Hypothesis Tests (null/alternative hypothesis, one-way vs. two-way tests) — `notebooks/05_ab-testing-and-t-tests.ipynb` (scaffolded, not yet answered)
-- [x] Resampling (permutation test, exhaustive vs. bootstrap permutation test) — `notebooks/05_ab-testing-and-t-tests.ipynb` (scaffolded, not yet answered)
-- [x] Statistical Significance and P-Values — `notebooks/05_ab-testing-and-t-tests.ipynb` (scaffolded, not yet answered)
-  - [x] Alpha, Type 1 and Type 2 Errors — `notebooks/05_ab-testing-and-t-tests.ipynb` (scaffolded, not yet answered)
-- [x] t-Tests — `notebooks/05_ab-testing-and-t-tests.ipynb` (scaffolded, not yet answered)
-- [ ] Multiple Testing
-- [ ] Degrees of Freedom
-- [ ] ANOVA
-  - [ ] F-Statistic
-  - [ ] Two-Way ANOVA
-- [ ] Chi-Square Test
-  - [ ] Chi-Square Test: A Resampling Approach
-  - [ ] Fisher's Exact Test
-  - [ ] Relevance for Data Science
-- [ ] Multi-Arm Bandit Algorithm
-- [ ] Power and Sample Size
+- [x] A/B Testing and Hypothesis Tests (null/alternative hypothesis, one-way vs. two-way tests) — `notebooks/05_ab-testing-and-t-tests.ipynb` (complete)
+- [x] Resampling (permutation test, exhaustive vs. bootstrap permutation test) — `notebooks/05_ab-testing-and-t-tests.ipynb` (complete)
+- [x] Statistical Significance and P-Values — `notebooks/05_ab-testing-and-t-tests.ipynb` (complete)
+  - [x] Alpha, Type 1 and Type 2 Errors — `notebooks/05_ab-testing-and-t-tests.ipynb` (complete)
+- [x] t-Tests — `notebooks/05_ab-testing-and-t-tests.ipynb` (complete)
+- [x] Multiple Testing — `notebooks/06_multiple-testing-anova-chisq-power.ipynb` (scaffolded, not yet answered)
+- [x] Degrees of Freedom — `notebooks/06_multiple-testing-anova-chisq-power.ipynb` (scaffolded, not yet answered)
+- [x] ANOVA — `notebooks/06_multiple-testing-anova-chisq-power.ipynb` (scaffolded, not yet answered)
+  - [x] F-Statistic — `notebooks/06_multiple-testing-anova-chisq-power.ipynb` (scaffolded, not yet answered)
+  - [x] Two-Way ANOVA — `notebooks/06_multiple-testing-anova-chisq-power.ipynb` (scaffolded, not yet answered)
+- [x] Chi-Square Test — `notebooks/06_multiple-testing-anova-chisq-power.ipynb` (scaffolded, not yet answered)
+  - [x] Chi-Square Test: A Resampling Approach — `notebooks/06_multiple-testing-anova-chisq-power.ipynb` (scaffolded, not yet answered)
+  - [x] Fisher's Exact Test — `notebooks/06_multiple-testing-anova-chisq-power.ipynb` (scaffolded, not yet answered)
+  - [x] Relevance for Data Science — `notebooks/06_multiple-testing-anova-chisq-power.ipynb` (scaffolded, not yet answered)
+- [x] Multi-Arm Bandit Algorithm — `notebooks/06_multiple-testing-anova-chisq-power.ipynb` (scaffolded, not yet answered)
+- [x] Power and Sample Size — `notebooks/06_multiple-testing-anova-chisq-power.ipynb` (scaffolded, not yet answered)
 
 ## Ch 4 — Regression and Prediction
 - [ ] Simple Linear Regression (regression equation, fitted values, residuals)
