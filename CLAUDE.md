@@ -6,6 +6,33 @@ Statistics for Data Scientists* by applying each concept to a real dataset
 who already knows the syntax — the goal is conceptual intuition, not a
 tutorial.
 
+## Learner profile and goal
+
+The user is currently an **associate (entry-level) data scientist**. The
+point of this repo is to build the depth of intuition expected of a **senior
+data scientist, a decision-science / causal-inference role, or a machine-
+learning role** — they are not committed to one track, and anything learned
+here should transfer across all three. So:
+
+- Favor "why does this happen / what breaks / what would you do about it"
+  over "how do I call this function."
+- Whenever a concept has a common interview angle (assumptions and what each
+  one protects, bias vs. variance, leakage, confounding vs. mediators,
+  extrapolation, interpretation of coefficients, metric choice, etc.), build
+  that angle into the exercises and the exam, even if the book doesn't stress
+  it. Content beyond the book is fine when flagged as **supplementary**.
+- Tag content that leans toward one role (DS / Causal / ML) where it helps,
+  but don't treat the tags as exclusive.
+
+## Process: Opus advisor reviews the plan first
+
+Before implementing any new notebook (or batch of notebooks) and its exam,
+Claude drafts a short plan (notebook split, exercise list, exam question
+topics/roles) and has the **Opus advisor** (the `advisor` tool) review it
+**before writing files**. Fold the advisor's corrections into the build. Call
+the advisor again before declaring the work done. Skipping this step is not
+allowed even when the request looks routine.
+
 ## Role: guided instructor, not implementer
 
 Claude scaffolds exercises. Claude does not solve them.
@@ -63,6 +90,53 @@ attempt is heading somewhere wrong, don't hand over the answer immediately.
   rather than creating a duplicate if the topic already has a notebook.
 - Each concept gets its own markdown question cell + empty code cell(s), so
   the notebook reads as a sequence of self-contained mini-exercises.
+- Any exercise question that needs a library function the user may not have
+  memorized ends with a short `*Tools for this question:*` bullet list: the
+  call signature with its main parameters, what it returns, and any gotcha
+  (e.g., "`cooks_distance` returns a tuple, take `[0]`"). The goal is that
+  the user never has to leave the notebook to read documentation. Verify the
+  signatures against the installed versions. Exam questions don't need this
+  (they involve little or no code).
+- Notebook JSON is nbformat 4.5: every cell needs a unique `id`; copy the
+  kernelspec metadata from an existing notebook; write files as UTF-8; run
+  `nbformat.validate` on anything generated.
+- Before writing question text, check the actual column names/levels in
+  `ames_housing.csv`. Quirks: quality ratings are *words* (`Overall_Qual` is
+  `Very_Poor`...`Very_Excellent`, not 1-10); "none" is an explicit level
+  (`No_Garage`, `No_Basement`, `No_Fireplace`), not NaN; `Lot_Frontage` uses 0
+  where other versions have NA; rows are ordered roughly by neighborhood, not
+  by date; `Gr_Liv_Area == First_Flr_SF + Second_Flr_SF + Low_Qual_Fin_SF`
+  exactly; `Year_Remod_Add` is floored at 1950 (older homes show 1950 whether
+  or not they were remodeled), so "was remodeled" flags need `Year_Built >= 1950`.
+
+## Exams (from Ch 4 onward)
+
+Starting with Chapter 4, every notebook ends with an **Exam** section (do not
+retrofit notebooks 04-07). Purpose: test intuition and interview readiness,
+not coding.
+
+- 5-10 questions per notebook. Mostly *no code*: the model outputs are
+  printed into the question (as fenced ```text blocks, never as code cells,
+  so they don't read as pre-filled analysis) and the user reads, predicts,
+  or explains. Three question types, mixed: **read an output**, **predict
+  what happens if X changes**, **interview-style** ("how would you explain /
+  what could go wrong / what would you do").
+- Each question has a title, a role-lean tag (DS / Causal / ML), the stem
+  with real numbers, then two cells: **Your answer** (user fills in) and
+  **Review** (placeholder `_pending_`; Claude fills in after the user
+  answers).
+- Exam output must come from model specs/subsets that differ from the
+  notebook's exercises, so the exam is not an answer key for the exercises.
+  Every number in a stem must be computed from the real data (a throwaway
+  script that builds the notebook and prints the exam outputs is the
+  reliable way); never invent output.
+- No hidden answer key in the notebook. Review cells stay empty until the
+  user has answered.
+- Reviewing exam answers follows the Review protocol below: confirm briefly
+  when right (being right is a fully acceptable outcome), correct only real
+  flaws. The "stuck" hint ladder is for exercises, not exams; if the user
+  asks for help on an exam question, give a hint first, then fill in the
+  review only after they have committed an answer.
 
 ## Tooling
 
@@ -73,6 +147,12 @@ attempt is heading somewhere wrong, don't hand over the answer immediately.
   matplotlib, scikit-learn, ipykernel. No seaborn or jupyter/jupyterlab CLI
   installed — notebooks are expected to be run via an IDE's Jupyter
   integration (e.g. VS Code), not `jupyter notebook`/`lab`.
+- Not installed: `pygam`, seaborn. For splines/GAMs use patsy `bs()`/`cr()`
+  inside `smf.ols` formulas and `statsmodels.gam.api.GLMGam` + `BSplines`.
+  Python has no built-in AIC stepwise; point the user at a hand-written loop
+  on `.aic` or `sklearn.feature_selection.SequentialFeatureSelector` (which
+  ranks by CV score instead). patsy `bs()` cannot predict outside the range
+  it was fit on unless `lower_bound`/`upper_bound` are passed.
 
 ## Syllabus / progress tracker
 

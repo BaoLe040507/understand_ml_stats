@@ -73,27 +73,30 @@ notebook filename next to the checked item so this doubles as an index.
 - [x] Power and Sample Size — `notebooks/07_chi-square-bandits-and-power.ipynb` (scaffolded, not yet answered)
 
 ## Ch 4 — Regression and Prediction
-- [ ] Simple Linear Regression (regression equation, fitted values, residuals)
-- [ ] Multiple Linear Regression
-  - [ ] Assessing the Model (RMSE, R², adjusted R²)
-  - [ ] Model Selection and Stepwise Regression
-  - [ ] Weighted Regression
-- [ ] Factor (Categorical) Variables in Regression
-  - [ ] Dummy Variable Representation
-  - [ ] Factor Variables with Many Levels
-  - [ ] Ordered Factor Variables
-- [ ] Interpreting the Regression Equation
-  - [ ] Correlated Predictors
-  - [ ] Multicollinearity
-  - [ ] Confounding Variables
-  - [ ] Interactions and Main Effects
-- [ ] Testing the Assumptions: Regression Diagnostics
-  - [ ] Outliers
-  - [ ] Influential Values
-  - [ ] Heteroskedasticity, Non-Normality, and Correlated Errors
-  - [ ] Partial Residual Plots and Nonlinearity
-- [ ] Polynomial and Spline Regression
-  - [ ] Generalized Additive Models (GAM)
+*(Sections below came from the reconstructed outline; flag any that don't match the book.)*
+- [x] Simple Linear Regression (regression equation, fitted values, residuals) — `notebooks/08_simple-and-multiple-regression.ipynb` (scaffolded, not yet answered; exam included)
+- [x] Multiple Linear Regression — `notebooks/08_simple-and-multiple-regression.ipynb` (scaffolded, not yet answered; exam included)
+  - [x] Assessing the Model (RMSE, R², adjusted R²) — `notebooks/08_simple-and-multiple-regression.ipynb` (scaffolded, not yet answered; exam included)
+  - [x] Model Selection and Stepwise Regression — `notebooks/08_simple-and-multiple-regression.ipynb` (scaffolded, not yet answered; exam included)
+  - [x] Weighted Regression — `notebooks/08_simple-and-multiple-regression.ipynb` (scaffolded, not yet answered; exam included)
+- [x] Factor (Categorical) Variables in Regression — `notebooks/09_factor-variables-in-regression.ipynb` (scaffolded, not yet answered; exam included)
+  - [x] Dummy Variable Representation — `notebooks/09_factor-variables-in-regression.ipynb` (scaffolded, not yet answered; exam included)
+  - [x] Factor Variables with Many Levels — `notebooks/09_factor-variables-in-regression.ipynb` (scaffolded, not yet answered; exam included)
+  - [x] Ordered Factor Variables — `notebooks/09_factor-variables-in-regression.ipynb` (scaffolded, not yet answered; exam included)
+- [x] Interpreting the Regression Equation — `notebooks/10_interpreting-the-regression-equation.ipynb` (scaffolded, not yet answered; exam included)
+  - [x] Correlated Predictors — `notebooks/10_interpreting-the-regression-equation.ipynb` (scaffolded, not yet answered; exam included)
+  - [x] Multicollinearity — `notebooks/10_interpreting-the-regression-equation.ipynb` (scaffolded, not yet answered; exam included)
+  - [x] Confounding Variables — `notebooks/10_interpreting-the-regression-equation.ipynb` (scaffolded, not yet answered; exam included)
+  - [x] Interactions and Main Effects — `notebooks/10_interpreting-the-regression-equation.ipynb` (scaffolded, not yet answered; exam included)
+- [x] Testing the Assumptions: Regression Diagnostics — `notebooks/11_regression-diagnostics.ipynb` (scaffolded, not yet answered; exam included)
+  - [x] Outliers — `notebooks/11_regression-diagnostics.ipynb` (scaffolded, not yet answered; exam included)
+  - [x] Influential Values — `notebooks/11_regression-diagnostics.ipynb` (scaffolded, not yet answered; exam included)
+  - [x] Heteroskedasticity, Non-Normality, and Correlated Errors — `notebooks/11_regression-diagnostics.ipynb` (scaffolded, not yet answered; exam included)
+  - [x] Partial Residual Plots and Nonlinearity — `notebooks/11_regression-diagnostics.ipynb` (scaffolded, not yet answered; exam included)
+- [x] Polynomial and Spline Regression — `notebooks/12_polynomial-spline-and-gam.ipynb` (scaffolded, not yet answered; exam included)
+  - [x] Generalized Additive Models (GAM) — `notebooks/12_polynomial-spline-and-gam.ipynb` (scaffolded, not yet answered; exam included)
+
+Supplementary (not in the book, flagged in the notebooks): omitted-variable-bias identity and mediators / bad controls (`10`), spatial residual correlation via lat/long (`11`), target-encoding leakage (`09`).
 
 ## Ch 5 — Classification
 - [ ] Naive Bayes
