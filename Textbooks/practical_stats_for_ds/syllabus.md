@@ -91,7 +91,7 @@ notebook filename next to the checked item so this doubles as an index.
 - [x] Testing the Assumptions: Regression Diagnostics — `notebooks/11_regression-diagnostics.ipynb` (scaffolded, not yet answered; exam included)
   - [x] Outliers — `notebooks/11_regression-diagnostics.ipynb` (scaffolded, not yet answered; exam included)
   - [x] Influential Values — `notebooks/11_regression-diagnostics.ipynb` (scaffolded, not yet answered; exam included)
-  - [x] Heteroskedasticity, Non-Normality, and Correlated Errors — `notebooks/11_regression-diagnostics.ipynb` (scaffolded, not yet answered; exam included)
+  - [x] Heteroskedasticity, Non-Normality, and Correlated Errors — `notebooks/11_regression-diagnostics.ipynb` (scaffolded, not yet answered; exam included; non-normality is exam-only after the 1-hour condense)
   - [x] Partial Residual Plots and Nonlinearity — `notebooks/11_regression-diagnostics.ipynb` (scaffolded, not yet answered; exam included)
 - [x] Polynomial and Spline Regression — `notebooks/12_polynomial-spline-and-gam.ipynb` (scaffolded, not yet answered; exam included)
   - [x] Generalized Additive Models (GAM) — `notebooks/12_polynomial-spline-and-gam.ipynb` (scaffolded, not yet answered; exam included)

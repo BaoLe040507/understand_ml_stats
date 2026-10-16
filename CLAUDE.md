@@ -109,13 +109,37 @@ attempt is heading somewhere wrong, don't hand over the answer immediately.
   exactly; `Year_Remod_Add` is floored at 1950 (older homes show 1950 whether
   or not they were remodeled), so "was remodeled" flags need `Year_Built >= 1950`.
 
+## Time budget (from notebook 09 onward)
+
+Each notebook, exam included, should take the user **one hour at most**. They
+found 60-90+ minute notebooks too slow to get through the book, so 09-12 were
+condensed to this format and every new notebook follows it:
+
+- At most **4 exercise sections**, each with at most **3 sub-parts** (about 10
+  minutes per section). Drop a sub-part if an earlier one already settles its
+  answer; move overflow topics into the exam instead of adding sections.
+- At most **one heavy pipeline sub-part per notebook** (a CV loop, a bootstrap,
+  a train/test comparison of several models). When a later section needs the
+  same machinery, tell the user to reuse their earlier function or split.
+- "Compute it by hand" **once per concept**, then use the library.
+- Each section has a checkable **Predict first** line (it asks for a sign,
+  a direction, a rough size, or a choice between buckets, never just "predict
+  what happens"), followed by a `_Prediction:_` markdown cell before the code
+  cells and a `_What matched, what surprised you, and why (2-3 bullets):_`
+  cell after them.
+- Keep the intro to about 100 words and each section's text to about 150-250
+  words. Trim prose and boilerplate, never the worked numeric picture.
+- Put known plumbing gotchas (unseen category levels, predicting outside a
+  spline's range, tuple returns) in the Tools list, so the user's time goes
+  into the concept and not into debugging pandas.
+
 ## Exams (from Ch 4 onward)
 
 Starting with Chapter 4, every notebook ends with an **Exam** section (do not
 retrofit notebooks 04-07). Purpose: test intuition and interview readiness,
 not coding.
 
-- 5-10 questions per notebook. Mostly *no code*: the model outputs are
+- 5 questions per notebook (08 has 7; it predates the time budget). Mostly *no code*: the model outputs are
   printed into the question (as fenced ```text blocks, never as code cells,
   so they don't read as pre-filled analysis) and the user reads, predicts,
   or explains. Three question types, mixed: **read an output**, **predict
@@ -193,3 +217,16 @@ follow-up questions or push back just to be thorough. Only go deeper when
 something is actually incorrect or incomplete, and explain the specific
 flaw. The goal is one clean pass per concept, not a dragged-out Socratic
 dialogue.
+
+### Review format: easy to scan (applies to exam Review cells and chat reviews)
+
+The user wants reviews they can read in seconds, so:
+
+- Open with **one line** of overall verdict.
+- Then **one bullet per sub-part**, starting with a bold verdict
+  (**Right**, **Mostly right**, **Right call, wrong reason**, **Off**).
+- Only flawed parts get a fix, and the fix is **one or two sentences**, with
+  the key number or the sentence they should say instead (in italics).
+- Bold the one term or number that matters. No paragraphs, no re-teaching the
+  whole concept, no more than about 120 words per question.
+- Anything right gets a verdict and nothing else.
