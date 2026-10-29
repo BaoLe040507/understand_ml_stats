@@ -15,8 +15,8 @@ dependencies = [
     "matplotlib>=3.11",
     "scikit-learn>=1.9",
     "ipykernel>=7.3",
-    "yfinance",
-    "requests",
+    "yfinance>=1.7",
+    "requests>=2.34",
 ]
 
 [tool.setuptools.packages.find]

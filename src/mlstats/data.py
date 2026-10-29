@@ -4,15 +4,16 @@ import pandas as pd
 from .paths import DATA_DIR
 
 
-def _require(path, script):
+def _require(path, script=None):
     if not path.exists():
-        raise FileNotFoundError(f"{path} is missing. Run `python scripts/{script}` from the repo root to build it.")
+        hint = f"Run `python scripts/{script}` from the repo root to build it." if script else "It is a committed file; restore it with git."
+        raise FileNotFoundError(f"{path} is missing. {hint}")
     return path
 
 
 def load_ames() -> pd.DataFrame:
     """Ames Housing (2,930 x 81), unchanged from the committed CSV."""
-    return pd.read_csv(_require(DATA_DIR / "ames" / "ames_housing.csv", "(committed file; check git)"))
+    return pd.read_csv(_require(DATA_DIR / "ames" / "ames_housing.csv"))
 
 
 def _read_dated(name, script="fetch_markets.py"):
