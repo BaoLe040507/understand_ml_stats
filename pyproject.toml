@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlstats"
+version = "0.1.0"
+description = "Helpers and data loaders for the understand_ml_stats notebooks"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas>=3.0",
+    "numpy>=2.5",
+    "scipy>=1.18",
+    "statsmodels>=0.15",
+    "matplotlib>=3.11",
+    "scikit-learn>=1.9",
+    "ipykernel>=7.3",
+    "yfinance",
+    "requests",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
