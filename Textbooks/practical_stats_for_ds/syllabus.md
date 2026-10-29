@@ -100,12 +100,12 @@ notebook filename next to the checked item so this doubles as an index.
 - [x] Testing the Assumptions: Regression Diagnostics — `notebooks/ch04_regression/11_regression-diagnostics.ipynb` · markets (built; markets rebuild: how much to trust a stock's beta; exam in `reviews/R01_regression-diagnostics.ipynb`)
   - [x] Outliers — `notebooks/ch04_regression/11_regression-diagnostics.ipynb` · markets (built; LOW influence by Cook's distance, March 2020)
   - [x] Influential Values — `notebooks/ch04_regression/11_regression-diagnostics.ipynb` · markets (built; leverage x residual, beta with vs. without influential days)
-  - [x] Heteroskedasticity, Non-Normality, and Correlated Errors — `notebooks/ch04_regression/11_regression-diagnostics.ipynb` · markets (built; Breusch-Pagan, HC3; non-normality / fat tails are exam-only; exam in R01)
+  - [x] Heteroskedasticity, Non-Normality, and Correlated Errors — `notebooks/ch04_regression/11_regression-diagnostics.ipynb` · markets (built; Breusch-Pagan, HC3; non-normality / fat tails are not exercised; exam in R01)
   - [x] Partial Residual Plots and Nonlinearity — `notebooks/ch04_regression/11_regression-diagnostics.ipynb` · markets (built; SPG three-factor model, down-market kink; exam in R01)
 - [x] Polynomial and Spline Regression — `notebooks/ch04_regression/12_polynomial-spline-and-gam.ipynb` · Ames (scaffolded, not yet answered; exam included)
   - [x] Generalized Additive Models (GAM) — `notebooks/ch04_regression/12_polynomial-spline-and-gam.ipynb` · Ames (scaffolded, not yet answered; exam included)
 
-Supplementary (not in the book, flagged in the notebooks): omitted-variable-bias identity and mediators / bad controls (`10`), uncorrelated vs. independent errors, overlapping-return autocorrelation / HAC, and survivorship in the stock universe (`11`), target-encoding leakage (`09`).
+Supplementary (not in the book, flagged in the notebooks): omitted-variable-bias identity and mediators / bad controls (`10`), uncorrelated vs. independent errors and overlapping-return autocorrelation / HAC (`11`), survivorship in the stock universe (R01 exam), target-encoding leakage (`09`).
 
 ## Ch 5 — Classification
 - [ ] Naive Bayes — *planned: notebook 13 · churn*
