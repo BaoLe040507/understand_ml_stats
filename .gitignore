@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+*.egg-info/
+
+# Fetched datasets (rebuilt by scripts/fetch_*.py); keep manifests and placeholders
+Textbooks/practical_stats_for_ds/data/markets/*
+!Textbooks/practical_stats_for_ds/data/markets/MANIFEST.md
+!Textbooks/practical_stats_for_ds/data/markets/.gitkeep
+Textbooks/practical_stats_for_ds/data/churn/*
+!Textbooks/practical_stats_for_ds/data/churn/MANIFEST.md
+!Textbooks/practical_stats_for_ds/data/churn/.gitkeep
