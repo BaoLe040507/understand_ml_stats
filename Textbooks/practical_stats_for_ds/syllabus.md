@@ -12,11 +12,11 @@ notebook filename next to the checked item so this doubles as an index.
 
 ## Status
 
-- **Current:** notebook 10 (`ch04_regression/10_interpreting-the-regression-equation.ipynb`), section 1 done (reflection bullets still blank); sections 2-4 next.
-- **Then:** 11 (markets, rebuilt), 12 (Ames), then Ch 5 on churn.
+- **Current:** notebook 10 is finished and its exam (Q1-Q5) is reviewed. Next step: notebook 11 (markets, rebuilt), then 12 (Ames), then Ch 5 on churn.
 - **Open review notebook:** `reviews/R01_regression-diagnostics.ipynb` (11's exam). Exams for 10 and 12 remain inside those notebooks.
 - **Log:**
   - 2026-10-29: repo refactored to project mode (see CLAUDE.md)
+  - 2026-11-02: notebook 10 exam Q1-Q5 reviewed (weakest: Q3 omitted-variable-bias direction, Q4 mediator vs. confounder, Q5 centering)
 
 ## How this gets used
 
