@@ -48,9 +48,20 @@ being taught. Claude does not solve the concept parts.
   section, such as fitting and specifying the model, computing VIF / Cook's
   distance / a bootstrap / a permutation test the first time, choosing a
   threshold, and all interpretation (prediction and reflection cells).
+- **The user also writes the feature engineering.** Any notebook that fits a
+  model on new inputs opens with a short "Build your features" step: 1–3
+  features (counts, bins, ratios, differences, interactions), each with the
+  numeric picture of why it might carry signal, written by the user in one
+  `add_features(df)` function applied identically to train and test. Teach the
+  two rules every time it matters: nothing is computed from the test set
+  (bin edges, means, encodings come from train only), and features must only
+  use information available at prediction time. Later notebooks extend the
+  feature set rather than rebuild it (see *Graduated helpers*).
 - **Claude pre-fills:** the setup cell (imports, data loading via
-  `mlstats`, any filtering, merging, or feature prep that isn't the concept),
-  and plotting or printing cells that *consume* the user's result.
+  `mlstats`, filtering or merging that isn't the concept), encoding and
+  scaling plumbing (`OrdinalEncoder`, dummies, `StandardScaler`, always fit on
+  train only), and plotting or printing cells that *consume* the user's
+  result.
 - **Stub cells:** a user code cell may contain a one-line stub naming the
   variable that later pre-filled cells expect (e.g. `model = ...  # fit
   excess return on the market factor`). It must not contain any part of the
@@ -58,7 +69,11 @@ being taught. Claude does not solve the concept parts.
 - **Graduated helpers:** once the user has implemented a concept by hand in
   a notebook, Claude may add a library version of it to `src/mlstats/`
   (e.g. `walk_forward_splits`, `bootstrap_stat`) and later notebooks can call
-  it in setup cells. Never put an ungraduated concept in `src/`.
+  it in setup cells. Never put an ungraduated concept in `src/`. The same
+  applies to features: once the user's churn `add_features` from notebook 13
+  is done, move it to `src/mlstats/features.py` (`add_churn_features`, the
+  user's code as written) so later churn notebooks call it in setup and add
+  new features on top.
 - **Reading:** the user reads the relevant book sections before a notebook.
   Separate notes are optional, since the prediction and reflection cells act
   as the notes. The user doesn't have to bring a summary first; "start
@@ -126,7 +141,7 @@ understand_ml_stats/
     │   ├── ch04_regression/       # 08–12
     │   ├── ch05_classification/   # 13–15
     │   ├── ch06_statistical_ml/   # 16–19
-    │   └── ch07_unsupervised/     # 20–22
+    │   └── ch07_unsupervised/     # 20–21
     └── reviews/                   # R01_..., R02_... weekly exam notebooks
 ```
 
@@ -232,7 +247,7 @@ session (~30-45 min).
 | 4 | What drives price / how far can I trust a coefficient? | Ames (10, 12), markets (11) | 08–12 |
 | 5 | Who will churn, and who should a limited retention budget target? | churn | 13–15 |
 | 6 | Can more flexible models honestly beat the Ch5 logistic baseline? | churn | 16–19 |
-| 7 | What hidden structure is there in the market, and in customers? | markets (20–21), churn (22) | 20–22 |
+| 7 | What hidden structure is there in the market, and in customers? | markets (20–21), churn (Gower section of 21) | 20–21 |
 
 Planned notebook split (adjust with the advisor when building; keep the
 time budget):
@@ -246,7 +261,11 @@ time budget):
   partial residual plot of a stock on the Fama-French factors (does the
   market slope bend in down markets?).
 - **12** Polynomial, spline, GAM: Ames, already built, unchanged.
-- **13** Naive Bayes + discriminant analysis (churn baselines).
+- **13** Naive Bayes + discriminant analysis: a **short warm-up (~40 min)**.
+  §1 the user builds `n_addons`, `tenure_band`, `charge_drift`; §2 Naive
+  Bayes (by hand once, then `CategoricalNB` all-columns vs. lean); §3 LDA on
+  six numeric features. Both are quick churn baselines to beat, not deep
+  dives. Built 2026-11-19; its exam is R01 Q6–Q8.
 - **14** Logistic regression: logit, GLM, odds ratios, interpreting
   coefficients (the `No internet service` dummy-trap quirk), assessing the
   model.
@@ -263,16 +282,19 @@ time budget):
   regularization, hyperparameters with CV.
 - **20** PCA on universe returns: is PC1 the market? Loadings by sector;
   scree. Correspondence analysis is exam-only (on churn categoricals).
-- **21** K-means + hierarchical clustering of stocks: clusters vs. GICS
-  sectors, choosing k, correlation-based dissimilarity, dendrogram.
-  *Supplementary:* survivorship bias of a "today's large caps" universe.
-- **22** Model-based clustering (`GaussianMixture`) + scaling and mixed
-  data on churn customers: dominant variables, Gower's distance by hand
-  once.
+- **21** Clustering, the last notebook: k-means + hierarchical clustering
+  of stocks (clusters vs. GICS sectors, choosing k, correlation-based
+  dissimilarity, dendrogram), then one section on scaling and mixed data
+  with churn customers (dominant variables, Gower's distance by hand once).
+  Model-based clustering (`GaussianMixture`, mixtures of normals) and the
+  survivorship bias of a "today's large caps" universe are **exam-only**.
 
 Ch5 and Ch6 all use **one fixed stratified train/test split** from
 `load_churn_split()` and the same headline metric, so every model comparison
 across notebooks 13-19 is honest.
+
+Sections marked exam-only still get checked off in `syllabus.md`, with the
+review notebook as the location.
 
 ## Datasets and quirks
 

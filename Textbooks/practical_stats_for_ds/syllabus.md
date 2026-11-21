@@ -12,11 +12,12 @@ notebook filename next to the checked item so this doubles as an index.
 
 ## Status
 
-- **Current:** notebook 10 is finished and its exam (Q1-Q5) is reviewed. Next step: notebook 11 (markets, rebuilt), then 12 (Ames), then Ch 5 on churn.
-- **Open review notebook:** `reviews/R01_regression-diagnostics.ipynb` (11's exam). Exams for 10 and 12 remain inside those notebooks.
+- **Current:** Chapter 4 done (notebook 12 exercises finished 2026-11-19; its in-notebook exam skipped). Notebook 13 is built and not yet started. Next: notebook 13 (churn warm-up: features, Naive Bayes, LDA), then 14 (logistic regression), then 15.
+- **Open review notebook:** `reviews/R01_regression-diagnostics.ipynb`: Q1–Q5 from notebook 11 and Q6–Q8 from notebook 13, all unanswered.
 - **Log:**
   - 2026-10-29: repo refactored to project mode (see CLAUDE.md)
   - 2026-11-02: notebook 10 exam Q1-Q5 reviewed (weakest: Q3 omitted-variable-bias direction, Q4 mediator vs. confounder, Q5 centering)
+  - 2026-11-19: notebook 12 exercises finished (exam skipped). Notebook 13 built; the user now writes feature engineering (CLAUDE.md updated).
 
 ## How this gets used
 
@@ -108,8 +109,8 @@ notebook filename next to the checked item so this doubles as an index.
 Supplementary (not in the book, flagged in the notebooks): omitted-variable-bias identity and mediators / bad controls (`10`), uncorrelated vs. independent errors and overlapping-return autocorrelation / HAC (`11`), survivorship in the stock universe (R01 exam), target-encoding leakage (`09`).
 
 ## Ch 5 — Classification
-- [ ] Naive Bayes — *planned: notebook 13 · churn*
-- [ ] Discriminant Analysis (LDA) — *planned: notebook 13 · churn*
+- [x] Naive Bayes — `notebooks/ch05_classification/13_naive-bayes-and-lda.ipynb` · churn (built, not yet answered; exam R01 Q6–Q7)
+- [x] Discriminant Analysis (LDA) — `notebooks/ch05_classification/13_naive-bayes-and-lda.ipynb` · churn (built, not yet answered; exam R01 Q8)
 - [ ] Logistic Regression — *planned: notebook 14 · churn*
   - [ ] Logistic Response Function and Logit — *planned: notebook 14 · churn*
   - [ ] Logistic Regression and the GLM — *planned: notebook 14 · churn*
