@@ -1,7 +1,7 @@
 # Markets data manifest
 
 - Sources: yfinance adjusted close (auto_adjust=True); Ken French Data Library daily 3 factors (https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_daily_CSV.zip)
-- Window: 2016-01-01 to 2025-12-31 (yfinance end exclusive); run date 2026-10-29
+- Window: 2016-01-01 to 2025-12-31 (yfinance end exclusive); run date 2026-11-21
 - Tickers: 66 stocks (6 per GICS sector, current classification) + SPY
 - Files: prices.csv (2513, 67), returns.csv (2513, 67), ff_factors_daily.csv (2513, 4), universe.csv (67, 3)
 - Dates inner-joined between yfinance and French; factors converted from percent to decimals
