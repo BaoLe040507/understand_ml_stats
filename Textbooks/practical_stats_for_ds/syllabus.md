@@ -12,12 +12,13 @@ notebook filename next to the checked item so this doubles as an index.
 
 ## Status
 
-- **Current:** Chapter 4 done (notebook 12 exercises finished 2026-11-19; its in-notebook exam skipped). Notebook 13 is built and not yet started. Next: notebook 13 (churn warm-up: features, Naive Bayes, LDA), then 14 (logistic regression), then 15.
-- **Open review notebook:** `reviews/R01_regression-diagnostics.ipynb`: Q1–Q5 from notebook 11 and Q6–Q8 from notebook 13, all unanswered.
+- **Current:** Notebook 13 done (exercises answered and reviewed 2026-11-21). Notebook 14 (logistic regression) is built and not yet started. Next: notebook 14, then 15 (evaluating classifiers + imbalanced data).
+- **Open review notebooks:** `reviews/R01_regression-diagnostics.ipynb` (Q1–Q5 from notebook 11, Q6–Q8 from notebook 13, all unanswered) and `reviews/R02_classification.ipynb` (Q1–Q5 from notebook 14, unanswered; started because R01 would have passed 10 questions).
 - **Log:**
   - 2026-10-29: repo refactored to project mode (see CLAUDE.md)
   - 2026-11-02: notebook 10 exam Q1-Q5 reviewed (weakest: Q3 omitted-variable-bias direction, Q4 mediator vs. confounder, Q5 centering)
   - 2026-11-19: notebook 12 exercises finished (exam skipped). Notebook 13 built; the user now writes feature engineering (CLAUDE.md updated).
+  - 2026-11-21: notebook 13 answered and reviewed (fixed `charge_drift` to divide by tenure; weakest: add-on curve rises before falling, Naive Bayes overconfidence). Features graduated to `mlstats.features.add_churn_features`. Notebook 14 and R02 built (advisor tool unavailable this session; plan self-reviewed against CLAUDE.md instead).
 
 ## How this gets used
 
@@ -109,13 +110,13 @@ notebook filename next to the checked item so this doubles as an index.
 Supplementary (not in the book, flagged in the notebooks): omitted-variable-bias identity and mediators / bad controls (`10`), uncorrelated vs. independent errors and overlapping-return autocorrelation / HAC (`11`), survivorship in the stock universe (R01 exam), target-encoding leakage (`09`).
 
 ## Ch 5 — Classification
-- [x] Naive Bayes — `notebooks/ch05_classification/13_naive-bayes-and-lda.ipynb` · churn (built, not yet answered; exam R01 Q6–Q7)
-- [x] Discriminant Analysis (LDA) — `notebooks/ch05_classification/13_naive-bayes-and-lda.ipynb` · churn (built, not yet answered; exam R01 Q8)
-- [ ] Logistic Regression — *planned: notebook 14 · churn*
-  - [ ] Logistic Response Function and Logit — *planned: notebook 14 · churn*
-  - [ ] Logistic Regression and the GLM — *planned: notebook 14 · churn*
-  - [ ] Predicted Values, Interpreting Coefficients, Odds Ratios — *planned: notebook 14 · churn*
-  - [ ] Assessing the Model — *planned: notebook 14 · churn*
+- [x] Naive Bayes — `notebooks/ch05_classification/13_naive-bayes-and-lda.ipynb` · churn (exam R01 Q6–Q7)
+- [x] Discriminant Analysis (LDA) — `notebooks/ch05_classification/13_naive-bayes-and-lda.ipynb` · churn (exam R01 Q8)
+- [x] Logistic Regression — `notebooks/ch05_classification/14_logistic-regression.ipynb` · churn (built, not yet answered; exam R02 Q1–Q5)
+  - [x] Logistic Response Function and Logit — `notebooks/ch05_classification/14_logistic-regression.ipynb` · churn §1
+  - [x] Logistic Regression and the GLM — `notebooks/ch05_classification/14_logistic-regression.ipynb` · churn §2 (dummy trap)
+  - [x] Predicted Values, Interpreting Coefficients, Odds Ratios — `notebooks/ch05_classification/14_logistic-regression.ipynb` · churn §3; odds ratio vs. risk ratio, causal reading in R02 Q1–Q3
+  - [x] Assessing the Model — `notebooks/ch05_classification/14_logistic-regression.ipynb` · churn §4 (LR test, calibration); linear probability model and separation in R02 Q4–Q5
 - [ ] Evaluating Classification Models — *planned: notebook 15 · churn*
   - [ ] Confusion Matrix — *planned: notebook 15 · churn*
   - [ ] Precision, Recall, Specificity — *planned: notebook 15 · churn*

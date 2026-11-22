@@ -124,6 +124,7 @@ understand_ml_stats/
 │   ├── paths.py                   # DATA_DIR etc., resolved from the package location
 │   ├── data.py                    # load_ames, load_returns, load_factors, load_universe,
 │   │                              # load_churn, load_churn_split
+│   ├── features.py                # graduated features (ADDONS, add_churn_features from nb 13)
 │   └── plots.py                   # plumbing-only plot helpers + graduated helpers
 ├── scripts/
 │   ├── fetch_markets.py           # yfinance + Ken French download -> data/markets/
@@ -205,11 +206,22 @@ inside notebooks; see *Exams*). Don't spend the freed time on more content.
 ## Exams: weekly review notebooks
 
 Purpose: test intuition and interview readiness, not coding. Exams are still
-**written at build time**, 5 questions per notebook, but from notebook 11
-onward they go into the **current review notebook** in
-`Textbooks/practical_stats_for_ds/reviews/` instead of the end of the
-exercise notebook. The user works through the review notebook in one weekly
-session (~30-45 min).
+**written at build time**, but from notebook 11 onward they go into the
+**current review notebook** in `Textbooks/practical_stats_for_ds/reviews/`
+instead of the end of the exercise notebook.
+
+**Keep the review load small (changed 2026-11-22).** The user's study hour
+can't hold the content, the project, and long exams, so:
+
+- **3 questions per notebook** (2 for a short warm-up notebook), down from 5.
+- **Exactly one is marked ★ (core):** the highest-value interview angle in
+  the notebook, the one an interviewer is most likely to ask. Put `★ ` at the
+  start of its title.
+- **The weekly review is ★ questions only, ~15-20 min.** Unstarred questions
+  are optional; they get used in the April interview sprint's rapid reviews.
+  Never treat an unanswered unstarred question as a backlog item.
+- The review notebook's intro says this in one line, so the user can see at
+  a glance what's required.
 
 - Notebooks 08, 09, 10, and 12 keep their existing in-notebook exams. Don't
   move them. Notebooks 04-07 have no exams; don't retrofit.
