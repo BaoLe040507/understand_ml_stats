@@ -12,13 +12,15 @@ notebook filename next to the checked item so this doubles as an index.
 
 ## Status
 
-- **Current:** Notebook 13 done (exercises answered and reviewed 2026-11-21). Notebook 14 (logistic regression) is built and not yet started. Next: notebook 14, then 15 (evaluating classifiers + imbalanced data).
-- **Open review notebooks:** `reviews/R01_regression-diagnostics.ipynb` (Q1–Q5 from notebook 11, Q6–Q8 from notebook 13, all unanswered) and `reviews/R02_classification.ipynb` (Q1–Q5 from notebook 14, unanswered; started because R01 would have passed 10 questions).
+- **Current:** Notebook 14 done (answered 2026-11-22). Notebook 15 (evaluating classifiers + imbalanced data, the last Chapter 5 notebook) is built and not yet started. Next: notebook 15, then Chapter 6 (16 KNN).
+- **Open review notebooks:** `reviews/R01_regression-diagnostics.ipynb` (Q1–Q8) and `reviews/R02_classification.ipynb` (Q1–Q5 from notebook 14, Q6–Q8 from notebook 15). Only ★ questions are required: R01 ★Q6, ★Q8; R02 ★Q3, ★Q4, ★Q6. All unanswered; review scheduled Sun Nov 29.
 - **Log:**
   - 2026-10-29: repo refactored to project mode (see CLAUDE.md)
   - 2026-11-02: notebook 10 exam Q1-Q5 reviewed (weakest: Q3 omitted-variable-bias direction, Q4 mediator vs. confounder, Q5 centering)
   - 2026-11-19: notebook 12 exercises finished (exam skipped). Notebook 13 built; the user now writes feature engineering (CLAUDE.md updated).
   - 2026-11-21: notebook 13 answered and reviewed (fixed `charge_drift` to divide by tenure; weakest: add-on curve rises before falling, Naive Bayes overconfidence). Features graduated to `mlstats.features.add_churn_features`. Notebook 14 and R02 built (advisor tool unavailable this session; plan self-reviewed against CLAUDE.md instead).
+  - 2026-11-22: notebook 14 answered. Review load cut to 3 questions per notebook with one ★ (CLAUDE.md); R01/R02 core questions starred.
+  - 2026-11-23: notebook 15 built (confusion matrix, AUC by hand, lift, up-weighting, cost-based cutoff); notebook-14 features graduated to `mlstats.features.add_logit_features`; exam R02 Q6–Q8 (★Q6).
 
 ## How this gets used
 
@@ -112,21 +114,21 @@ Supplementary (not in the book, flagged in the notebooks): omitted-variable-bias
 ## Ch 5 — Classification
 - [x] Naive Bayes — `notebooks/ch05_classification/13_naive-bayes-and-lda.ipynb` · churn (exam R01 Q6–Q7)
 - [x] Discriminant Analysis (LDA) — `notebooks/ch05_classification/13_naive-bayes-and-lda.ipynb` · churn (exam R01 Q8)
-- [x] Logistic Regression — `notebooks/ch05_classification/14_logistic-regression.ipynb` · churn (built, not yet answered; exam R02 Q1–Q5)
+- [x] Logistic Regression — `notebooks/ch05_classification/14_logistic-regression.ipynb` · churn (answered 2026-11-22; exam R02 Q1–Q5)
   - [x] Logistic Response Function and Logit — `notebooks/ch05_classification/14_logistic-regression.ipynb` · churn §1
   - [x] Logistic Regression and the GLM — `notebooks/ch05_classification/14_logistic-regression.ipynb` · churn §2 (dummy trap)
   - [x] Predicted Values, Interpreting Coefficients, Odds Ratios — `notebooks/ch05_classification/14_logistic-regression.ipynb` · churn §3; odds ratio vs. risk ratio, causal reading in R02 Q1–Q3
   - [x] Assessing the Model — `notebooks/ch05_classification/14_logistic-regression.ipynb` · churn §4 (LR test, calibration); linear probability model and separation in R02 Q4–Q5
-- [ ] Evaluating Classification Models — *planned: notebook 15 · churn*
-  - [ ] Confusion Matrix — *planned: notebook 15 · churn*
-  - [ ] Precision, Recall, Specificity — *planned: notebook 15 · churn*
-  - [ ] ROC Curve, AUC — *planned: notebook 15 · churn*
-  - [ ] Lift — *planned: notebook 15 · churn*
-- [ ] Strategies for Imbalanced Data — *planned: notebook 15 · churn*
-  - [ ] Undersampling / Oversampling / Up-Down Weighting — *planned: notebook 15 · churn*
-  - [ ] Data Generation (e.g. SMOTE) — *planned: notebook 15, conceptual / exam-only · churn*
-  - [ ] Cost-Based Classification — *planned: notebook 15 · churn*
-  - [ ] Exploring the Predictions — *planned: notebook 15 · churn*
+- [x] Evaluating Classification Models — `notebooks/ch05_classification/15_evaluating-classifiers.ipynb` · churn (built, not yet answered; exam R02 Q6–Q7)
+  - [x] Confusion Matrix — `notebooks/ch05_classification/15_evaluating-classifiers.ipynb` · churn §1 (with the rare-class problem)
+  - [x] Precision, Recall, Specificity — `notebooks/ch05_classification/15_evaluating-classifiers.ipynb` · churn §1
+  - [x] ROC Curve, AUC — `notebooks/ch05_classification/15_evaluating-classifiers.ipynb` · churn §2 (AUC by hand as pairwise ranking)
+  - [x] Lift — `notebooks/ch05_classification/15_evaluating-classifiers.ipynb` · churn §3 (with cumulative gains)
+- [x] Strategies for Imbalanced Data — `notebooks/ch05_classification/15_evaluating-classifiers.ipynb` · churn (exam R02 Q8)
+  - [x] Undersampling / Oversampling / Up-Down Weighting — `notebooks/ch05_classification/15_evaluating-classifiers.ipynb` · churn §4 (up-weighting); undersampling + intercept correction in R02 Q8
+  - [ ] Data Generation (e.g. SMOTE) — not exercised (imbalanced-learn not installed); concept only
+  - [x] Cost-Based Classification — `notebooks/ch05_classification/15_evaluating-classifiers.ipynb` · churn §4 (profit by cutoff; supplementary uplift caveat)
+  - [x] Exploring the Predictions — `notebooks/ch05_classification/15_evaluating-classifiers.ipynb` · churn §2–3 (ROC and gains charts)
 
 ## Ch 6 — Statistical Machine Learning
 - [ ] K-Nearest Neighbors — *planned: notebook 16 · churn*

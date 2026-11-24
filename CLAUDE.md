@@ -286,7 +286,9 @@ time budget):
   weighting; cost-based threshold from a retention-offer cost vs. customer
   value. *Supplementary (Causal):* churn risk ≠ responsiveness to the offer
   (uplift). SMOTE is conceptual/exam-only unless `imbalanced-learn` gets
-  installed.
+  installed. Built 2026-11-23 on notebook 14's model (setup rebuilds it via
+  `add_logit_features` + the six-flag formula); no feature step since the
+  inputs don't change; exam R02 Q6–Q8 (★Q6).
 - **16** KNN: standardization, KNN as a feature engine.
 - **17** Trees: recursive partitioning, impurity, stopping/pruning.
 - **18** Bagging and random forest: variable importance, hyperparameters.

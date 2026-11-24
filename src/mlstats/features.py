@@ -23,3 +23,13 @@ def add_churn_features(df):
     out["charge_drift"] = np.where(out["tenure"] > 0, (out["MonthlyCharges"] - (out["TotalCharges"]/out["tenure"])), 0)
 
     return out
+
+
+def add_logit_features(df):
+    """Notebook 14's features: log_tenure and six 0/1 add-on flags (<addon>_yes). Returns a copy."""
+    out = df.copy()
+    out["log_tenure"] = np.log1p(out["tenure"])
+    # 0/1 "has it" flags, built the same way in train and test
+    for c in ADDONS:
+        out[c + "_yes"] = (out[c] == "Yes").astype(int)
+    return out
