@@ -12,8 +12,8 @@ notebook filename next to the checked item so this doubles as an index.
 
 ## Status
 
-- **Current:** Notebook 14 done (answered 2026-11-22). Notebook 15 (evaluating classifiers + imbalanced data, the last Chapter 5 notebook) is built and not yet started. Next: notebook 15, then Chapter 6 (16 KNN).
-- **Open review notebooks:** `reviews/R01_regression-diagnostics.ipynb` (Q1–Q8) and `reviews/R02_classification.ipynb` (Q1–Q5 from notebook 14, Q6–Q8 from notebook 15). Only ★ questions are required: R01 ★Q6, ★Q8; R02 ★Q3, ★Q4, ★Q6. All unanswered; review scheduled Sun Nov 29.
+- **Current:** Chapter 5 done (notebooks 13–15 answered). Notebook 16 (KNN, the first Chapter 6 notebook) is built and not yet started. Next: notebook 16, then 17 (trees).
+- **Open review notebooks:** `reviews/R01_regression-diagnostics.ipynb` (Q1–Q8; ★Q6, ★Q8 required, all unanswered; review scheduled Sun Nov 29) and `reviews/R03_knn-and-feature-engines.ipynb` (Q1–Q3 from notebook 16; ★Q1 required). R02 is closed (★Q3, ★Q4, ★Q6 answered and reviewed 2026-11-24; its unstarred questions are optional, for the April sprint).
 - **Log:**
   - 2026-10-29: repo refactored to project mode (see CLAUDE.md)
   - 2026-11-02: notebook 10 exam Q1-Q5 reviewed (weakest: Q3 omitted-variable-bias direction, Q4 mediator vs. confounder, Q5 centering)
@@ -21,6 +21,8 @@ notebook filename next to the checked item so this doubles as an index.
   - 2026-11-21: notebook 13 answered and reviewed (fixed `charge_drift` to divide by tenure; weakest: add-on curve rises before falling, Naive Bayes overconfidence). Features graduated to `mlstats.features.add_churn_features`. Notebook 14 and R02 built (advisor tool unavailable this session; plan self-reviewed against CLAUDE.md instead).
   - 2026-11-22: notebook 14 answered. Review load cut to 3 questions per notebook with one ★ (CLAUDE.md); R01/R02 core questions starred.
   - 2026-11-23: notebook 15 built (confusion matrix, AUC by hand, lift, up-weighting, cost-based cutoff); notebook-14 features graduated to `mlstats.features.add_logit_features`; exam R02 Q6–Q8 (★Q6).
+  - 2026-11-24: R02 ★Q3, ★Q4, ★Q6 answered and reviewed (weakest: Q3 relative % vs percentage points, Q4 collinearity blamed for an OLS-vs-logistic gap). Q1, Q2, Q5, Q7, Q8 unanswered (optional).
+  - 2026-11-24: notebook 16 built (feature step `add_knn_features`, KNN by hand + z-scores, choosing K by CV, leaky vs. out-of-fold KNN feature); exam R03 Q1–Q3 (★Q1). R02 closed. Advisor reviewed the plan; fixes folded in.
 
 ## How this gets used
 
@@ -131,9 +133,9 @@ Supplementary (not in the book, flagged in the notebooks): omitted-variable-bias
   - [x] Exploring the Predictions — `notebooks/ch05_classification/15_evaluating-classifiers.ipynb` · churn §2–3 (ROC and gains charts)
 
 ## Ch 6 — Statistical Machine Learning
-- [ ] K-Nearest Neighbors — *planned: notebook 16 · churn*
-  - [ ] Standardization (Z-Scores) — *planned: notebook 16 · churn*
-  - [ ] KNN as a Feature Engine — *planned: notebook 16 · churn*
+- [x] K-Nearest Neighbors — `notebooks/ch06_statistical_ml/16_k-nearest-neighbors.ipynb` · churn §2–3 (distance by hand, choosing K by CV)
+  - [x] Standardization (Z-Scores) — `notebooks/ch06_statistical_ml/16_k-nearest-neighbors.ipynb` · churn §2
+  - [x] KNN as a Feature Engine — `notebooks/ch06_statistical_ml/16_k-nearest-neighbors.ipynb` · churn §4 (leaky vs. out-of-fold score stacked into the logistic model)
 - [ ] Tree Models — *planned: notebook 17 · churn*
   - [ ] Recursive Partitioning Algorithm — *planned: notebook 17 · churn*
   - [ ] Measuring Homogeneity or Impurity — *planned: notebook 17 · churn*

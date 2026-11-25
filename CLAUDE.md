@@ -289,7 +289,7 @@ time budget):
   installed. Built 2026-11-23 on notebook 14's model (setup rebuilds it via
   `add_logit_features` + the six-flag formula); no feature step since the
   inputs don't change; exam R02 Q6–Q8 (★Q6).
-- **16** KNN: standardization, KNN as a feature engine.
+- **16** KNN: standardization, KNN as a feature engine. Built 2026-11-24: §1 feature step (`add_knn_features`: `contract_num`, `is_fiber`), §2 z-scores + `knn_prob` by hand, §3 choosing K by CV on train, §4 leaky vs. out-of-fold KNN score stacked into the logistic formula; exam R03 Q1–Q3 (★Q1). After the user finishes it, graduate `add_knn_features` to `mlstats.features`.
 - **17** Trees: recursive partitioning, impurity, stopping/pruning.
 - **18** Bagging and random forest: variable importance, hyperparameters.
 - **19** Boosting: algorithm, XGBoost (install `xgboost` when building),
